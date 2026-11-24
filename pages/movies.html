@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Movies & TV Shows — MovieStream</title>
+    <meta name="description" content="Browse and discover top trending, popular, and high-rated movies by genre, release year, and IMDb score on MovieStream.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/movies.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="movies">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-play"></i></span>
+                    <span class="logo-text">Movie<span class="text-red">Stream</span></span>
+                </a>
+                <nav class="nav-menu" id="nav-menu">
+                    <a href="../index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="movies.html" class="nav-link active"><i class="fa-solid fa-film"></i> Movies</a>
+                    <a href="movies.html?genre=Action" class="nav-link"><i class="fa-solid fa-fire"></i> Trending</a>
+                    <a href="movies.html?filter=top-rated" class="nav-link"><i class="fa-solid fa-star"></i> Top Rated</a>
+                    <a href="movies.html?filter=watchlist" class="nav-link" id="nav-watchlist-link"><i class="fa-solid fa-bookmark"></i> My List <span class="badge-count" id="watchlist-count">0</span></a>
+                </nav>
+            </div>
+
+            <div class="nav-right">
+                <!-- Search Box -->
+                <div class="search-wrapper" id="search-wrapper">
+                    <button class="search-toggle-btn" id="search-toggle-btn" aria-label="Toggle Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-input-box" id="search-input-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon-inner"></i>
+                        <input type="text" id="global-search-input" placeholder="Search movies, genres, actors..." autocomplete="off">
+                        <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <!-- Live Instant Search Dropdown -->
+                    <div class="search-dropdown" id="search-dropdown">
+                        <div class="search-dropdown-header">
+                            <span class="dropdown-title">Quick Results</span>
+                            <span class="dropdown-count" id="search-dropdown-count">0 movies</span>
+                        </div>
+                        <div class="search-dropdown-list" id="search-dropdown-list">
+                            <!-- Populated dynamically via search.js -->
+                        </div>
+                        <a href="movies.html" class="search-view-all" id="search-view-all">View all results <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- User Profile -->
+                <div class="user-profile">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="User Profile" class="avatar-img">
+                </div>
+
+                <!-- Hamburger Button (Mobile) -->
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Mobile Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Overlay -->
+        <div class="mobile-drawer" id="mobile-drawer">
+            <div class="mobile-drawer-header">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-play"></i></span>
+                    <span class="logo-text">Movie<span class="text-red">Stream</span></span>
+                </a>
+                <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mobile-drawer-links">
+                <a href="../index.html" class="mobile-link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="movies.html" class="mobile-link active"><i class="fa-solid fa-film"></i> All Movies</a>
+                <a href="movies.html?genre=Action" class="mobile-link"><i class="fa-solid fa-fire"></i> Trending</a>
+                <a href="movies.html?filter=top-rated" class="mobile-link"><i class="fa-solid fa-star"></i> Top Rated</a>
+                <a href="movies.html?filter=watchlist" class="mobile-link"><i class="fa-solid fa-bookmark"></i> My Watchlist</a>
+            </div>
+        </div>
+        <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="movies-page-main">
+        <!-- Header Banner -->
+        <section class="explore-header-section">
+            <div class="explore-header-content">
+                <span class="badge badge-red"><i class="fa-solid fa-compass"></i> Discover</span>
+                <h1 class="explore-page-title" id="explore-heading">Browse Movie Catalog</h1>
+                <p class="explore-subtitle">Explore blockbuster releases, curated collections, and critically-acclaimed titles filtered to your personal taste.</p>
+            </div>
+        </section>
+
+        <div class="content-wrapper explore-wrapper">
+            <!-- Filter & Discovery Control Bar -->
+            <section class="filter-control-panel">
+                <!-- Genre Category Pills -->
+                <div class="genre-pill-bar" id="genre-pill-bar">
+                    <button class="genre-pill active" data-genre="all">All Genres</button>
+                    <button class="genre-pill" data-genre="Action">Action</button>
+                    <button class="genre-pill" data-genre="Sci-Fi">Sci-Fi</button>
+                    <button class="genre-pill" data-genre="Drama">Drama</button>
+                    <button class="genre-pill" data-genre="Comedy">Comedy</button>
+                    <button class="genre-pill" data-genre="Horror">Horror</button>
+                    <button class="genre-pill" data-genre="Romance">Romance</button>
+                    <button class="genre-pill" data-genre="Adventure">Adventure</button>
+                    <button class="genre-pill" data-genre="Animation">Animation</button>
+                    <button class="genre-pill" data-genre="Crime">Crime</button>
+                </div>
+
+                <!-- Secondary Filter & Sort Controls -->
+                <div class="filter-actions-row">
+                    <div class="filter-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="in-page-search" placeholder="Filter current results..." autocomplete="off">
+                    </div>
+
+                    <div class="filter-selects-group">
+                        <div class="custom-select-wrap">
+                            <label for="sort-select"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort by:</label>
+                            <select id="sort-select" class="custom-select">
+                                <option value="popularity">Popularity</option>
+                                <option value="rating-desc">Rating: High to Low</option>
+                                <option value="year-desc">Release Date: Newest</option>
+                                <option value="title-asc">Title: A to Z</option>
+                            </select>
+                        </div>
+
+                        <div class="custom-select-wrap">
+                            <label for="year-select"><i class="fa-regular fa-calendar"></i> Year:</label>
+                            <select id="year-select" class="custom-select">
+                                <option value="all">All Years</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2020-2021">2020 - 2021</option>
+                                <option value="classic">Classics (Pre-2020)</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-outline" id="reset-filters-btn" title="Reset all filters">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Filter Status and Result Count -->
+            <div class="results-status-bar">
+                <span class="results-count" id="results-count-text">Showing <strong>0</strong> movies</span>
+                <div class="view-mode-toggles">
+                    <button class="view-btn active" id="view-grid-btn" aria-label="Grid View"><i class="fa-solid fa-grip"></i></button>
+                    <button class="view-btn" id="view-compact-btn" aria-label="Compact View"><i class="fa-solid fa-list"></i></button>
+                </div>
+            </div>
+
+            <!-- Dynamic Movies Grid -->
+            <section class="movies-catalog-grid" id="movies-catalog-grid">
+                <!-- Movie cards populated dynamically via movies.js & main.js -->
+            </section>
+
+            <!-- Empty State Display -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <div class="empty-state-icon">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <h3>No Movies Found</h3>
+                <p>We couldn't find any movies matching your current filters or search query.</p>
+                <button class="btn btn-primary" id="empty-reset-btn"><i class="fa-solid fa-rotate-left"></i> Reset Filters</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= MOVIE DETAILS MODAL ================= -->
+    <div class="modal-overlay" id="movie-modal" aria-hidden="true">
+        <div class="modal-container">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Details Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-backdrop-wrap">
+                <img src="" alt="Backdrop" class="modal-backdrop-img" id="modal-backdrop">
+                <div class="modal-backdrop-overlay"></div>
+                <div class="modal-header-actions">
+                    <h2 class="modal-movie-title" id="modal-title">Movie Title</h2>
+                    <div class="modal-cta-buttons">
+                        <a href="#" class="btn btn-primary" id="modal-play-link">
+                            <i class="fa-solid fa-play"></i> Watch Now
+                        </a>
+                        <button class="btn btn-icon-round" id="modal-watchlist-btn" title="Add to Watchlist">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-info-grid">
+                    <div class="modal-main-info">
+                        <div class="modal-meta-row">
+                            <span class="badge badge-green" id="modal-match">98% Match</span>
+                            <span class="modal-year" id="modal-year">2024</span>
+                            <span class="modal-rating-badge" id="modal-age">PG-13</span>
+                            <span class="modal-duration" id="modal-duration">2h 15m</span>
+                            <span class="badge badge-quality" id="modal-quality">4K Ultra HD</span>
+                        </div>
+                        <p class="modal-synopsis" id="modal-synopsis">
+                            Detailed synopsis goes here...
+                        </p>
+                    </div>
+                    <div class="modal-side-meta">
+                        <p><strong>Genres:</strong> <span id="modal-genres">Action, Adventure</span></p>
+                        <p><strong>Director:</strong> <span id="modal-director">Christopher Nolan</span></p>
+                        <p><strong>Cast:</strong> <span id="modal-cast">Matthew McConaughey, Anne Hathaway</span></p>
+                        <p><strong>IMDb Rating:</strong> <span id="modal-imdb"><i class="fa-solid fa-star text-gold"></i> 8.6/10</span></p>
+                    </div>
+                </div>
+
+                <!-- Trailer Preview -->
+                <div class="modal-trailer-section" id="modal-trailer-section">
+                    <h3 class="modal-subheading"><i class="fa-solid fa-video"></i> Official Trailer</h3>
+                    <div class="modal-video-frame" id="modal-trailer-frame">
+                        <!-- Embedded trailer iframe / video -->
+                    </div>
+                </div>
+
+                <!-- Similar Movies Recommendations -->
+                <div class="modal-recommendations">
+                    <h3 class="modal-subheading"><i class="fa-solid fa-film"></i> More Like This</h3>
+                    <div class="recommendations-grid" id="modal-recommendations-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TOAST NOTIFICATION CONTAINER ================= -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-play"></i></span>
+                    <span class="logo-text">Movie<span class="text-red">Stream</span></span>
+                </a>
+                <p class="footer-tagline">Unlimited cinema, anywhere, anytime. Stream thousands of blockbuster movies, award-winning indie films, and cult classics in stunning 4K HDR.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="movies.html">All Movies</a></li>
+                        <li><a href="movies.html?genre=Trending">Trending</a></li>
+                        <li><a href="movies.html?filter=top-rated">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Genres</h4>
+                    <ul>
+                        <li><a href="movies.html?genre=Sci-Fi">Sci-Fi</a></li>
+                        <li><a href="movies.html?genre=Action">Action</a></li>
+                        <li><a href="movies.html?genre=Drama">Drama</a></li>
+                        <li><a href="movies.html?genre=Horror">Horror</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MovieStream Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/movies.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
