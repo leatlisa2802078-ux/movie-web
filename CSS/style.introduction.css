@@ -1,0 +1,145 @@
+.contact_box{
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgb(142, 97, 97);
+    background-color: rgb(92, 43, 44);
+}
+
+.contact_box_header{
+    font-size: 28px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    background-color: rgb(102, 71, 71);
+}
+
+.contact_box_body{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px;
+}
+
+.contact_item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 25px;
+    border: 1px solid gray;
+    text-decoration: none;
+    color: rgb(201, 190, 190);
+    font-size: 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    overflow-wrap: anywhere; 
+}
+
+.contact_icon{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #8c78f5;
+    place-items: center;
+}
+
+.contact_icon i{
+    margin: auto;
+}
+
+.icon_green{
+    color: green;
+}
+
+.icon_red{
+    color: red;
+}
+
+.icon_pink{
+    color: rgb(234, 121, 140);
+}
+
+/* =========== contact ===========*/
+
+@media (max-width: 575.98px) {
+  .contact_box_header { padding: 18px 20px; }
+  .contact_box_body { padding: 20px; gap: 14px; }
+  .contact_item { padding: 16px; }
+}
+
+
+/* ============ About Us ============ */
+
+.content_text{
+    height: 100%;
+    line-height: 1.5;
+}
+
+.text_header{
+    text-align: center;
+    padding: 15px;
+    font-weight: 800;   
+    color: blanchedalmond;
+
+}
+
+.content_subtitle{
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(166, 130, 130);
+}
+
+.content_image{
+    margin-top: 24px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content_image img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+
+}
+.sentence{
+    max-width: 900px;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: 18px;
+    color: rgb(137, 112, 112);
+}
+
+.content_team{
+    max-width: 850px;
+    margin: 10px auto;
+    color: rgb(207, 198, 195);
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 10px;
+    background-color: rgb(90, 43, 43);
+}
+
+.content_team h3{
+    font-weight: 700;
+    margin-bottom: -20px;
+}
+
+.content_mission{
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.content_mission h3{
+    font-weight: 800;
+    text-align: center;
+    color: blanchedalmond;
+}
+

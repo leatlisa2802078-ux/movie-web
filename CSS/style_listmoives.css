@@ -1,0 +1,316 @@
+.main_hero{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  margin-bottom: -20px;
+}
+
+.main_option{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option_letter{
+  font-size: 25px;
+  line-height: 0.5;
+  span{
+    font-size: 20px;
+  }
+}
+
+/* ============== Box Date =========== */
+.date-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0px 40px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.main_date {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 16px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.main_date::-webkit-scrollbar {
+    display: none;
+}
+
+.date_box {
+    flex: 0 0 120px;
+    height: 90px;
+    border: 1px solid #555;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.date_box:hover {
+    border-color: #ff0015;
+}
+
+.date_box.active {
+    border: 2px solid #ff0015;
+}
+
+.date_text {
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.date_num {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.date_box.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 576px) {
+    .date-wrapper {
+        padding: 0 20px;
+    }
+
+    .main_date {
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .date_box {
+        flex: 0 0 90px;
+        height: 85px;
+        border-radius: 10px;
+    }
+
+    .date_text {
+        font-size: 14px;
+    }
+
+    .date_num {
+        font-size: 21px;
+    }
+}
+
+/* .main_date{
+  display: flex;
+  gap: 10px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0px auto;
+  height: 100%;
+
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.date_box{
+  display: block;
+  text-align: center;
+  width: 150px;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgb(192, 57, 57);
+}
+
+.date_box:hover{
+  border: 1px solid white;
+}
+
+.date_text{
+  color: gray;
+  line-height: 1;
+} */
+
+.card_body{
+  max-width: 1230px;
+  margin: 0 auto;
+  border-radius: 6px;
+  /* border: 1px solid gray; */
+}
+
+@media (max-width: 576.98px){
+  .card_body{
+    padding: 0px 20px;
+  }
+}
+
+.card_box{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+ /* border: 1px solid gray; */
+}
+
+.card_image{
+  position: relative;
+}
+
+.box_image{
+  width: 93%;
+  margin: auto;
+  height: 320px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.box_image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box_iconImage{
+  position: absolute;
+  font-size: 14px;
+  font-weight: 400;
+  top: 10px;
+  left: 18px;
+  right: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box_iconImage span{
+  font-weight: 600;
+  background-color: rgb(79, 51, 62);
+}
+
+.box_iconImage .box_screen{
+  text-align: center;
+  width: 45px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: rgb(80, 80, 131);
+}
+
+.box_iconImage .box_heart{
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: rgb(80, 80, 131);
+  i{
+    font-size: 17px;
+    color: 	#FF3B55;
+  }
+}
+
+.box_heart:hover{
+  background-color: #D1BDBD;
+  color: red;
+}
+
+.card_box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card_box:hover {
+    transform: translateY(-8px);
+}
+
+.box_image img {
+    transition: transform 0.4s ease;
+}
+
+.card_box:hover .box_image img {
+    transform: scale(1.05);
+}
+
+/* ============== Color Icon Screen ============== */
+.format-2d {
+    color: #FFFFFF;
+}
+
+.format-3d {
+    color: 	#D4AF37;
+}
+
+.format-imax {
+    color: #48B9FF;
+}
+
+.format-4dx {
+    color: #FF7043;
+}
+
+.box_text{
+  height: auto;
+  padding: 15px;
+  color:rgb(243, 238, 238)
+}
+
+.box_detail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text_duration{
+  width: 40%;
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  /* color: rgb(158, 126, 31); */
+  color: 	#D4AF37;
+  border: 1px solid rgb(181, 128, 128);
+  background-color: rgb(91, 29, 29);
+}
+
+.text_date{
+  width: 60%;
+  font-size: 15px;
+  /* color: rgb(211, 193, 193); */
+  color: #D1BDBD;
+}
+
+.text_titleMovie{
+  font-size: 18px;
+  color: 	#FFFFFF;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+}
+
+.text_yearMovies{
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(171, 149, 149);
+}
+
+/* =============== favorite movie ============== */
+.fav_text{
+  /* display: none; */
+  width: 100%;
+  height: 600px;
+  line-height: 600px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: gray;
+}

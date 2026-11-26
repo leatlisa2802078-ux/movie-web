@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&B</title>
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- link Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- link font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style_ticket.css">
+</head>
+
+<body>
+    <header class="main-header sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <div class="row align-items-center g-2 py-2">
+
+                <!-- Logo -->
+                <div class="col-5 col-lg-3">
+                    <div class="brand_logo">
+                        <a href="#" class="header-icon">
+                            <i class="fa-solid fa-film"></i>
+                            relax <span>Cinema</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search: លើទូរសព្ទចុះទៅជួរក្រោម -->
+                <div class="col-8 col-lg-4 order-3 order-lg-2 mx-auto">
+                    <div class="search-box">
+                        <input type="search" class="search" placeholder="Search by name movie, category...">
+                        <a href="#" class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="col-7 col-lg-5 order-2 order-lg-3">
+                    <div class="header-right">
+                        <a href="./ticket.html">
+                            <button class="btn btn-secondary">
+                                <i class="fa-solid fa-ticket"></i>
+                                <span class="d-none d-xl-inline">Ticket</span>
+                            </button>
+                        </a>
+
+                        <a href="./fav_movie.html">
+                            <button class="btn btn-secondary">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </button>
+                        </a>
+
+                        <button class="btn btn-secondary position-relative">
+                            <i class="fa-regular fa-bell"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                        </button>
+
+                        <select name="language" id="language">
+                            <option value="english">English</option>
+                            <option value="khmer">ភាសាខ្មែរ</option>
+                        </select>
+
+                        <button class="btn btn-secondary"><i class="fa-solid fa-moon"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="rule">
+
+        <!-- Nav links -->
+        <div class="container">
+            <nav class="navbar">
+                <ul class="navbar-nav nav-row flex-row justify-content-center w-100">
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./list_moives.html"><i
+                                class="fa-regular fa-circle-play"></i> Movie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./location.html"><i
+                                class="fa-solid fa-location-dot"></i> Cinema</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./F&B.html"><i class="fa-solid fa-utensils"></i>
+                            F&B</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./moive_coming.html"><i
+                                class="fa-solid fa-video"></i> UpComing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_hero">
+            <div class="carousel-item active">
+                <div class="hero_bg" style="background-image: url('./image/image_ticket/food.jpg');"></div>
+                <div class="hero_front">
+                    <img src="./image/image_ticket/food.jpg" class="hero_img" alt="Relax Cinema - Movie Time">
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <section class="nav_bg">
+                <nav class="navbar ">
+                    <ul class="navbar-nav flex-row gap-2 fs-5 fw-bold">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home </a></li>
+                        <li class="nav-item"><a class="nav-link" href="./F&B.html"> <span style="color: white; font-size: 20px;">/ Food &amp; Drinks</span> </a></li>
+                    </ul>
+                </nav>
+
+                <h3 class="fw-bold mb-3">Food &amp; Drinks</h3>
+                <p class="food_p">Grab your favorite snacks and drinks before the movie starts.</p>
+            </section>
+
+            <!-- ================== Home discount Combo -->
+            <section class="home_promo mb-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5">
+                        <img class="home_promo_img" src="./Image/32cf6833-43ac-4f36-b89a-65b34a1e117f.webp"
+                            alt="Year End Combo only $8.99">
+                    </div>
+                    <div class="col-12 col-md-7 home_promo_body">
+                        <span class="badge text-bg-danger">Best Seller</span>
+                        <h2>Year End Combo</h2>
+                        <div class="home_menu">
+                            <i class="fa-regular fa-circle-check"></i>
+                            1x Popcorn (L)
+                        </div>
+
+                        <div class="home_menu">
+                            <i class="fa-regular fa-circle-check"></i>
+                            2x Soft Drink (M)
+                        </div>
+
+                        <div class="home_menu">
+                            <i class="fa-regular fa-circle-check"></i>
+                            1x Crunchy Tenders (6pcs)
+                        </div>
+
+                        <div class="home_menu">
+                            <i class="fa-regular fa-circle-check"></i>
+                            1x Midas Sandwich
+                        </div>
+
+                        <div class="home_promo_price">Only $8.99
+                            <span><del>$10.99</del></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Menu food and Drink ================= -->
+            <div class="container mb-4">
+                <section class="menu_food">
+                    <div class="menu_logo">
+                        <i class="fa-solid fa-utensils"></i> Menu
+                    </div>
+
+                    <!-- ============= body Card food & drink ============== -->
+                    <div class="food_body">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    <div class="food_bg">
+                                        <div class="food_img">
+                                            <img src="./image/32cf6833-43ac-4f36-b89a-65b34a1e117f.webp" alt="food &  drink">
+                                        </div>
+                                        <span class="badge text-bg-danger">Best Seller</span>
+                                    </div>
+                                    
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Year End Combo</h5>
+                                        <div class="food_subtitle">1 Popcorn (L), 2 Soft Drinks (M), Crunchy Tenders & Midas Sandwich</div>
+                                        <div class="foot_price">$8.99 <span><del>$10.99</del></span></div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    
+                                    <div class="food_img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbsWrPV-StJ5TIsj89OVyzoAzGsjzGHXGL7xTHaGtOgw&s=10" alt="food &  drink">
+                                    </div>
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Popcorn & Drink (L)</h5>
+                                        <div class="food_subtitle">1 Large popcorn + 2 Large soft drinks</div>
+                                        <div class="foot_price">$7.99</div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    
+                                    <div class="food_img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbsWrPV-StJ5TIsj89OVyzoAzGsjzGHXGL7xTHaGtOgw&s=10" alt="food &  drink">
+                                    </div>
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Popcorn & Drink (M)</h5>
+                                        <div class="food_subtitle">1 Medium popcorn + 2 Medium soft drink</div>
+                                        <div class="foot_price">$6.99 </div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    
+                                    <div class="food_img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUn-FMAVPvzWIiuKS81vTjbU6h4WhhBHfqky0MDwwVxw&s=10" alt="food">
+                                    </div>
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Popcorn (L)</h5>
+                                        <div class="food_subtitle">Sweet or salty • Large size</div>
+                                        <div class="foot_price">$3.99 </div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    
+                                    <div class="food_img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUn-FMAVPvzWIiuKS81vTjbU6h4WhhBHfqky0MDwwVxw&s=10" alt="food">
+                                    </div>
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Popcorn (M)</h5>
+                                        <div class="food_subtitle">Sweet or salty • Medium size</div>
+                                        <div class="foot_price">$2.99 </div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    
+                                    <div class="food_img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAr6GVz1vYG01gKSFRwrI-tc1PCHHUqPauHT7grzWAA&s=10" alt="drink">
+                                    </div>
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Coca-Cola (L)</h5>
+                                        <div class="food_subtitle">Ice-cold Coca-Cola • Large cup</div>
+                                        <div class="foot_price">$1.99 </div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <article class="food_card">
+                                    
+                                    <div class="food_img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAr6GVz1vYG01gKSFRwrI-tc1PCHHUqPauHT7grzWAA&s=10" alt="drink">
+                                    </div>
+                                    
+                                    <div class="food_text">
+                                        <h5 class="food_title">Coca-Cola (M)</h5>
+                                        <div class="food_subtitle">Ice-cold Coca-Cola • Medium cup</div>
+                                        <div class="foot_price">$1.00 </div>
+                                    </div>
+                                </article>
+                               
+                            </div>
+
+
+
+
+
+                        </div>
+                        
+                    </div>
+                    
+                </section>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer data-bs-theme="dark">
+        <div class="container">
+            <div class="row g-4 main_footer">
+
+                <div class="col-6 col-md-4 footer_left">
+                    <h4 class="footer_title">Company</h4>
+                    <div class="footer_brand">
+                        <p>Relax Cinema Cambodia <br> The Best from Korean &amp; American</p>
+                        <p>Open Daily : Mon - sun</p>
+                        <p>Open : 9am - 10pm</p>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./about_us.html"><i
+                                    class="fa-solid fa-users"></i> About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contact.html"><i class="fa-solid fa-phone"></i>
+                                Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./location.html"> <i
+                                    class="fa-solid fa-location-crosshairs"></i>Location Cinema</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-4 footer_center">
+                    <h4 class="footer_title">Prime Menu</h4>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html"> <i class="fa-solid fa-house"></i>
+                                Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./list_moives.html"><i
+                                    class="fa-regular fa-circle-play"></i> Movie</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./location.html"> <i
+                                    class="fa-solid fa-location-dot"></i>Cinema</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./F&B.html"><i class="fa-solid fa-utensils"></i>
+                                F&B</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./moive_coming.html"> <i
+                                    class="fa-solid fa-video"></i>UpComing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 footer_right">
+                    <h4 class="footer_title">Follow Our Social Media</h4>
+                    <div class="footer_logoIcon">
+                        <a class="footer_icon" href="https://web.facebook.com/?_rdc=1&_rdr#" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a class="footer_icon" href="https://www.instagram.com/" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a class="footer_icon" href="https://www.tiktok.com/en/" aria-label="TikTok"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a class="footer_icon" href="https://www.youtube.com/@Netflix" aria-label="YouTube"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a class="footer_icon" href="https://web.telegram.org/k/" aria-label="Telegram"><i
+                                class="fa-brands fa-telegram"></i></a>
+                    </div>
+
+                    <h4 class="footer_title">Get New Moive</h4>
+                    <div class="footer_logoIcon">
+                        <a class="footer_icon" href="https://apps.apple.com/us/app/imposter-game-fakeit/id6749012623"
+                            aria-label="ios"><i class="fa-brands fa-apple"></i></a>
+                        <a class="footer_icon" href="https://play.google.com/store/apps" aria-label="android"><i
+                                class="fa-brands fa-android"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="privacy">
+            <nav class="navbar">
+                <ul class="navbar-nav flex-row flex-wrap justify-content-center gap-2 gap-md-5 w-100">
+                    <li class="nav-item"><a class="nav-link" href="#">License</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Terms of Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Privacy &amp; Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promotions</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <div class="license"> Copyrights &copy; 2026 Relax Cinema Cambodia. <br> All rights reserved</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>

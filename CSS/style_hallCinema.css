@@ -1,0 +1,270 @@
+/* .main_hallCinema{
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 15px;
+    border: 1px solid rgb(79, 52, 52);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.hall_screen{
+    width: 550px;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid rgb(79, 52, 52);
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    h5{
+        line-height: 50px;
+    }
+}
+
+.hall_direction{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.text{
+    color: gray;
+    margin: 10px;
+    /* margin-top: -10px; */
+}
+
+.feel_title{
+    font-size: 25px;
+    i{
+        color: red;
+    }
+}
+
+.feel_icon i{
+    color: red;
+}
+
+.feel_card{
+    line-height: 1.5;
+}
+
+.food_subtitle{
+    margin-top: -13px;
+}
+
+/* .main_ticketImage{
+    height: 100vh;
+    background-image: url('../image/a887f62c-a304-4cb4-b984-1cde2538f482.webp');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    padding: 90px 0;
+} */
+
+.ticket_brand{
+    text-align: center;
+    line-height: 1.5;
+    color: white;
+    font-weight: 700;
+}
+
+.ticket_sent{
+    text-align: center;
+    margin-top: -10px;
+    font-size: 15px;
+    color: gray;
+}
+
+table{
+    margin: auto;
+}
+
+.promote{
+    background-color: red;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 5px 7px;
+}
+
+@media (max-width: 576.98px){
+    .promotion{
+        margin-top: 30px;
+    }
+
+    .feel_title{
+        padding: 0px 20px;
+    }
+
+    .feel_bodycard{
+        padding: 0 20px;
+    }
+
+    .navbar{
+        padding-left: 20px;
+        font-size: 40px;
+    }
+}
+
+
+.price-section {
+    padding: 20px 0;
+}
+
+.price-filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.price-filter label {
+    display: block;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.price-period {
+    display: inline-block;
+    background: #3a1717;
+    color: #ff6868;
+    border: 1px solid #8d3030;
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.ticket-price-card {
+    width: 100%;
+    height: 100%;
+    background: #170909;
+    color: white;
+    border: 1px solid #573333;
+    border-radius: 14px;
+    padding: 20px 10px;
+    text-align: center;
+    transition: .3s;
+}
+
+.ticket-price-card:hover {
+    border-color: #ff0015;
+    transform: translateY(-3px);
+}
+
+.ticket-price-card i {
+    color: #ff4242;
+    font-size: 25px;
+}
+
+.ticket-price-card h4 {
+    margin: 12px 0 5px;
+}
+
+.ticket-price {
+    color: #ff5555;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.ticket-note {
+    color: #aaa;
+    font-size: 13px;
+}
+
+@media(max-width:576px) {
+    .price-filter {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-price-card {
+        padding: 15px 5px;
+    }
+
+    .ticket-price {
+        font-size: 22px;
+    }
+
+    .text{
+        padding-left: 15px;
+    }
+
+    .feel_p{
+        padding: 0px 20px;
+    }
+
+    .type_format{
+        padding: 0px 10px;
+    }
+}
+
+.type_format{
+    display: flex;
+    flex-direction: row;
+    /* gap: 4px; */
+    line-height: 1;
+    margin-top: -10px;
+}
+
+.format_btn{
+    margin: 10px;
+    line-height: 1.5;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 15px;
+    background-color: rgb(133, 66, 66);
+}
+
+.format_btn:hover{
+    background-color: #8d3030;
+    border: 1px solid rgb(94, 38, 38);
+}
+
+.type_body{
+    max-width: 1300px;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding: 10px;
+    /* border: 1px solid; */
+}
+
+.type_card{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: rgb(44, 19, 19);
+    padding: 15px;
+}
+
+.type_card:hover{
+    background-color: #573333;
+    border: 1px solid rgb(171, 68, 68);
+}
+
+.type_icon{
+    font-size: 25px;
+    i{
+        font-size: 20px;
+        color: red;
+    }
+}
+
+.type_price{
+    font-size: 20px;
+}
+
+.type_subtitle{
+    color: gray;
+}
+
+.main_contact{
+    margin: 30px;
+    text-align:center;
+    line-height: 1.5;
+}

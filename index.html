@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relax Cinema</title>
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- link Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- link font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Angkor&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/style_ticket.css">
+
+</head>
+
+<body>
+  <header class="main-header sticky-top" data-bs-theme="dark" id="home_page">
+    <div class="container">
+      <div class="row align-items-center g-2 py-2">
+        <!-- Logo -->
+        <div class="col-5 col-lg-3">
+          <div class="brand_logo">
+            <a href="#" class="header-icon">
+              <i class="fa-solid fa-film"></i>
+              relax <span>Cinema</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Search: លើទូរសព្ទចុះទៅជួរក្រោម -->
+        <div class="col-8 col-lg-4 order-3 order-lg-2 mx-auto">
+          <div class="search-box">
+            <input type="search" class="search" placeholder="Search by name movie, category..." />
+            <a href="#" class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-7 col-lg-5 order-2 order-lg-3">
+          <div class="header-right">
+
+            <a href="./ticket.html">
+              <button class="btn btn-secondary">
+                <i class="fa-solid fa-ticket"></i>
+                <span class="d-none d-xl-inline">Ticket</span>
+              </button>
+            </a>
+
+
+            <a href="./fav_movie.html">
+              <button class="btn btn-secondary">
+                <i class="fa-solid fa-bookmark"></i>
+              </button>
+            </a>
+
+            <button class="btn btn-secondary position-relative">
+              <i class="fa-regular fa-bell"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+            </button>
+
+            <select name="language" id="language">
+              <option value="english">English</option>
+              <option value="khmer">ភាសាខ្មែរ</option>
+            </select>
+
+            <button class="btn btn-secondary">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="rule" />
+
+    <!-- Nav links -->
+    <div class="container">
+      <nav class="navbar">
+        <ul class="navbar-nav nav-row flex-row justify-content-center w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./list_moives.html"><i class="fa-regular fa-circle-play"></i> Movie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./location.html"><i class="fa-solid fa-location-dot"></i> Cinema</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./F&B.html"><i class="fa-solid fa-utensils"></i> F&B</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./moive_coming.html"><i class="fa-solid fa-video"></i> UpComing</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="header-bar">
+    <marquee scrollamount="10">Welcome to My Relax Cinema, Enjoy it</marquee>
+  </div>
+
+  <main>
+    <div class="main_hero">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"
+        data-bs-pause="false" aria-label="Featured promotions">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="hero_bg" style="background-image: url('./image/place_cinema.jpg');"></div>
+            <div class="hero_front">
+              <img src="./image/place_cinema.jpg" class="hero_img" style="--ratio: 1.42;"
+                alt="Relax Cinema - Movie Time">
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero_bg" style="background-image: url('./image/relax_cinema.png');">
+            </div>
+            <div class="hero_front">
+              <img src=".//image/relax_cinema.png" class="hero_img" style="--ratio: 1;"
+                alt="Year End Combo only $8.99">
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero_bg" style="background-image: url('./image/32cf6833-43ac-4f36-b89a-65b34a1e117f.webp');">
+            </div>
+            <div class="hero_front">
+              <img src="./image/32cf6833-43ac-4f36-b89a-65b34a1e117f.webp" class="hero_img" style="--ratio: 1.08;"
+                alt="Year End Combo only $8.99">
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero_bg" style="background-image: url('./Image/431a381f-7463-43ad-9b71-e5eea3673a24.webp');">
+            </div>
+            <div class="hero_front">
+              <img src="./Image/431a381f-7463-43ad-9b71-e5eea3673a24.webp" class="hero_img" style="--ratio: 1.08;"
+                alt="Every Tuesday buy 1 get 1 free ticket">
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero_bg" style="background-image: url('./Image/Gemini_Generated_Image_u4qk5qu4qk5qu4qk.jpg');">
+            </div>
+            <div class="hero_front">
+              <img src="./Image/Gemini_Generated_Image_u4qk5qu4qk5qu4qk.jpg" class="hero_img" style="--ratio: 1.08;"
+                alt="Every Tuesday buy 1 get 1 free ticket">
+            </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="hero_bg" style="background-image: url('./image/Gemini_Generated_Image_faijpmfaijpmfaij.jpg');">
+            </div>
+            <div class="hero_front">
+              <img src="./image/Gemini_Generated_Image_faijpmfaijpmfaij.jpg" class="hero_img" style="--ratio: 1.08;"
+                alt="Every Tuesday buy 1 get 1 free ticket">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="main_title">
+      <h2 class="title_Welcome">Welcome to RELAX CINEMA</h2>
+      <p class="title_p">Find your favorite movie, book your seat and enjoy the best Korean & American movies.</p>
+
+      <a href="./list_moives.html">
+        <button class="btn btn-danger">Explore Movies</button>
+      </a>
+    </div>
+
+    <div class="container mt-4">
+      <div class="hero_content">
+        <!-- ================== trending Movie ======================== -->
+        <div class="hero_topMovie">
+
+          <div class="hero_title">
+            <div class="hero_text"><i class="fa-solid fa-fire"></i>Trending Now</div>
+            <a class="hero_icon" href="./list_moives.html">View All <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+          <p class="hero_subtitle">Most watched movies this week</p>
+          <!-- ============== Card Box Movie ===================== -->
+          <div class="hero_card mb-4">
+            <div class="row g-2">
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="hero_box">
+                  <div class="hero_image">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPt_dPTEs6RHOp73cI62Gz8fG8VdK83fZQYxLyKg7VyA&s=10"
+                      alt="Image Movie">
+                  </div>
+
+                  <div class="hero_des">
+                    <h4 class="hero_titleMovie">Spider_Man</h4>
+                    <div class="hero_screen format-3d">3D</div>
+                  </div>
+                  <span class="hero_rating"><i class="fa-solid fa-star"></i> 8.5/10</span>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="hero_box">
+                  <div class="hero_image">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPt_dPTEs6RHOp73cI62Gz8fG8VdK83fZQYxLyKg7VyA&s=10"
+                      alt="Image Movie">
+                  </div>
+
+                  <div class="hero_des">
+                    <h4 class="hero_titleMovie">Spider_Man</h4>
+                    <div class="hero_screen format-imax">Imax</div>
+                  </div>
+                  <span class="hero_rating"><i class="fa-solid fa-star"></i> 9/10</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <hr>
+        <!-- =================== Card feel ======================= -->
+        <div class="main_feel">
+          <h3 class="feel_title"><i class="fa-solid fa-face-smile-beam"></i>What's your mood?</h3>
+          <div class="feel_p">
+            Pick a feeling and we will suggest movies for you
+          </div>
+
+          <div class="feel_bodycard mb-4">
+            <div class="row g-3">
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <button class="feel_card">
+                  <div class="feel_icon">
+                    <i class="fa-regular fa-face-laugh-squint"></i>
+                  </div>
+
+                  <h3 class="feel_letter">Want to laugh</h3>
+                  <div class="feel_type">Comdy</div>
+                </button>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <button class="feel_card">
+                  <div class="feel_icon">
+                    <i class="fa-solid fa-crosshairs"></i>
+                  </div>
+
+                  <h3 class="feel_letter">Want Excitement</h3>
+                  <div class="feel_type">Action</div>
+                </button>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <button class="feel_card">
+                  <div class="feel_icon">
+                    <i class="fa-solid fa-ghost"></i>
+                  </div>
+
+                  <h4 class="feel_letter">Want to Scared</h4>
+                  <div class="feel_type">Horror</div>
+                </button>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <button class="feel_card">
+                  <div class="feel_icon">
+                    <i class="fa-regular fa-face-grin-hearts"></i>
+                  </div>
+
+                  <h3 class="feel_letter">Want to lover</h3>
+                  <div class="feel_type">Romance</div>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= Now Showing ========================== -->
+        <div class="hero_nowMovie">
+          <div class="hero_title">
+            <div class="hero_text"><i class="fa-solid fa-globe"></i>Now showing</div>
+            <a class="hero_icon" href="./list_moives.html">View All <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+          <p class="hero_subtitle">Find your favorite movie and book your seat</p>
+
+          <section>
+            <div class="movie_filter mb-4">
+              <button class="btn_filter">All Movie</button>
+              <button class="btn_filter">Action</button>
+              <button class="btn_filter">Animation</button>
+              <button class="btn_filter">Comedy</button>
+              <button class="btn_filter">Horror</button>
+              <button class="btn_filter">Romance</button>
+            </div>
+
+            <!-- ============== Card Box Movie ===================== -->
+            <div class="hero_card">
+              <div class="row g-3">
+
+                <div class="col-6 col-md-4 col-lg-3">
+                  <div class="hero_box">
+                    <div class="hero_image">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf_21ac3w7tjl0d1mjn9jOArW9SzBbS3vp6l97gDVgkQ&s=10"
+                        alt="Image Movie">
+                    </div>
+
+                    <div class="hero_des">
+                      <h4 class="hero_titleMovie">Avartor</h4>
+                      <div class="hero_screen format-4dx">4Dx</div>
+                    </div>
+                    <div class="hero_type">Action</div>
+
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                  <div class="hero_box">
+                    <div class="hero_image">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf_21ac3w7tjl0d1mjn9jOArW9SzBbS3vp6l97gDVgkQ&s=10"
+                        alt="Image Movie">
+                    </div>
+
+                    <div class="hero_des">
+                      <h4 class="hero_titleMovie">Avartor</h4>
+                      <div class="hero_screen format-2d">2d</div>
+                    </div>
+                    <div class="hero_type">Animation</div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+        <hr>
+
+        <!-- ============== type cinema ================== -->
+        <section class="movie_format">
+          <div class="format_title"><i class="fa-solid fa-ranking-star"></i>cinema experience</div>
+
+          <div class="format_body">
+            <div class="row g-3">
+
+              <div class="col-12 col-lg-6">
+                <div class="format_box">
+                  <div class="format_image">
+                    <img src="https://www.eyecatchmedia.com/wp-content/uploads/2024/08/IMAX-screen.jpg"
+                      alt="Format movie">
+                  </div>
+
+                  <div class="format_text">
+                    <h4 class="format_subtitle">Screen IMAX</h4>
+                    <div class="format_sentence">Bigger screen, better Experience</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <div class="format_box">
+                  <div class="format_image">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjfXti7oyvrmWnPuY76gepDBY4YcU8cYo1qqAcxB8PNuKb5VgjwBG6UlQ&s=10"
+                      alt="Format movie">
+                  </div>
+                  <div class="format_text">
+                    <h4 class="format_subtitle">Screen 4DX</h4>
+                    <div class="format_sentence">Feel the movies</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </section>
+
+        <hr>
+
+        <!-- ===================== Price ticket ===================== -->
+        <section class="movie_ticket">
+          <div class="movie_ticketTitle">
+            <h4 class="ticket_title"><i class="fa-solid fa-ticket"></i> TICKET PRICE</h4>
+            <div class="ticket_subtitle">Special price for Everyone for during the upcoming <br> <b
+                style="font-size: 18px;">New Year Season</b></div>
+          </div>
+
+          <div class="ticket_card">
+            <div class="row g-3">
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="ticket_body">
+
+                  <div class="ticket_img">
+                    <img src="./image/image_ticket/child.jpg" alt="Image people">
+                  </div>
+
+                  <div class="ticket_text">
+
+                    <div class="ticket_header">
+                      <h5 class="text_title">👶CHILD</h5>
+                      <span class="text_age">3y-12y</span>
+                    </div>
+
+                    <div class="text_price">Price : <span>$3.00</span></div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="ticket_body">
+
+                  <div class="ticket_img">
+                    <img src="./image/image_ticket/aduit.jpg" alt="Image people">
+                  </div>
+
+                  <div class="ticket_text">
+
+                    <div class="ticket_header">
+                      <h5 class="text_title">🧑 ADUIT</h5>
+                      <span class="text_age">13year+</span>
+                    </div>
+
+                    <div class="text_price">Price : <span>$5.50</span></div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="ticket_body">
+
+                  <div class="ticket_img">
+                    <img src="./image/image_ticket/couple.jpg" alt="Image people">
+                  </div>
+
+                  <div class="ticket_text">
+
+                    <div class="ticket_header">
+                      <h5 class="text_title">❤️COUPLE</h5>
+                      <span class="text_age">2 Person</span>
+                    </div>
+
+                    <div class="text_price">Price : <span>$9.50</span></div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3">
+                <div class="ticket_body">
+
+                  <div class="ticket_img">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTM8Vbjp15ab1KS2LHOwXi_g3QFjfd6FH-Li38HwbqAw&s=10"
+                      alt="Image people">
+                  </div>
+
+                  <div class="ticket_text">
+
+                    <div class="ticket_header">
+                      <h5 class="text_title">👩‍👧‍👦 FAMIILY</h5>
+                      <span class="text_age">4 Person</span>
+                    </div>
+
+                    <div class="text_price">Price : <span>$15.00</span></div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <a href="./ticket.html">
+            <button class="btn btn-primary w-100 fw-bold">Exploring Information</button>
+          </a>
+
+        </section>
+      </div>
+
+      <!-- =================What is New -->
+      <h4 class="dis_subtitle ps-2">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+          What's New for CINEMA New Year?
+      </h4>
+      <section class="home_promo mb-4">
+        <div class="row g-0 align-items-center">
+          <div class="col-12 col-md-5">
+            <img class="home_promo_img" src="./Image/32cf6833-43ac-4f36-b89a-65b34a1e117f.webp"
+              alt="Year End Combo only $8.99">
+          </div>
+          <div class="col-12 col-md-7 home_promo_body">
+            <span class="badge text-bg-danger">Combo deal</span>
+            <h2>Year End Combo</h2>
+            <p>1x Popcorn (L), 2x Soft Drink (M), 1x Crunchy Tenders (6pcs), 1x Midas Sandwich</p>
+            <div class="home_promo_price">Only $8.99
+              <span><del>$10.99</del></span>
+            </div>
+            <a class="btn btn-outline-light fw-bold" href="./F&amp;B.html">See Food &amp; Drinks</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== Review movie ======================= -->
+      <section class="movie_review">
+       <div class="container">
+          <div class="review_header">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <h4>Recently Viewed</h4>
+          </div>
+          <p class="review_p">Movies you opened lately</p>
+
+          <div class="review_box">
+            <div class="row g-3">
+              <div class="review_noMovie">
+                <i class="fa-regular fa-eye-slash"></i>
+                <div class="review_note">No Recently Viewed movies yet</div>
+                <a href="./list_moives.html">
+                  <button class="btn btn-secondary">Explore movies</button>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+    </div>
+    <div id="home_page">
+      <a href="#" id="scrollTop">
+        <div class="main_scroll">
+          <button class="btn btn-secondary"><i class="fa-solid fa-chevron-up"></i></button>
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <footer data-bs-theme="dark">
+    <div class="container">
+      <div class="row g-4 main_footer">
+
+        <div class="col-6 col-md-4 footer_left">
+          <h4 class="footer_title">Company</h4>
+          <div class="footer_brand">
+            <p>Relax Cinema Cambodia <br> The Best from Korean &amp; American</p>
+            <p>Open Daily : Mon - sun</p>
+            <p>Open : 9am - 10pm</p>
+
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./about_us.html"><i class="fa-solid fa-users"></i> About
+                Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./location.html"> <i
+                  class="fa-solid fa-location-crosshairs"></i>Location Cinema</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 footer_center">
+          <h4 class="footer_title">Prime Menu</h4>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./index.html"> <i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./list_moives.html"><i class="fa-regular fa-circle-play"></i>
+                Movie</a></li>
+            <li class="nav-item"><a class="nav-link" href="./location.html"> <i
+                  class="fa-solid fa-location-dot"></i>Cinema</a></li>
+            <li class="nav-item"><a class="nav-link" href="./F&B.html"><i class="fa-solid fa-utensils"></i> F&B</a></li>
+            <li class="nav-item"><a class="nav-link" href="./moive_coming.html"> <i
+                  class="fa-solid fa-video"></i>UpComing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4 footer_right">
+          <h4 class="footer_title">Follow Our Social Media</h4>
+          <div class="footer_logoIcon">
+            <a class="footer_icon" href="https://web.facebook.com/?_rdc=1&_rdr#" aria-label="Facebook"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a class="footer_icon" href="https://www.instagram.com/" aria-label="Instagram"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a class="footer_icon" href="https://www.tiktok.com/en/" aria-label="TikTok"><i
+                class="fa-brands fa-tiktok"></i></a>
+            <a class="footer_icon" href="https://www.youtube.com/@Netflix" aria-label="YouTube"><i
+                class="fa-brands fa-youtube"></i></a>
+            <a class="footer_icon" href="https://web.telegram.org/k/" aria-label="Telegram"><i
+                class="fa-brands fa-telegram"></i></a>
+          </div>
+
+          <h4 class="footer_title">Get New Moive</h4>
+          <div class="footer_logoIcon">
+            <a class="footer_icon" href="https://apps.apple.com/us/app/imposter-game-fakeit/id6749012623"
+              aria-label="ios"><i class="fa-brands fa-apple"></i></a>
+            <a class="footer_icon" href="https://play.google.com/store/apps" aria-label="android"><i
+                class="fa-brands fa-android"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="privacy">
+      <nav class="navbar">
+        <ul class="navbar-nav flex-row flex-wrap justify-content-center gap-2 gap-md-5 w-100">
+          <li class="nav-item"><a class="nav-link" href="#">License</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Terms of Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Privacy &amp; Policy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Promotions</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr>
+    <div class="license"> Copyrights &copy; 2026 Relax Cinema Cambodia. <br> All rights reserved</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>

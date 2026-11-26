@@ -1,0 +1,749 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  .brand_logo,
+  .header-bar,
+  .option_letter,
+  .hero_text,
+  .format_title{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+  }
+  line-height: 1.5;
+  background-color: rgb(54, 7, 7);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* ============ Header ============== */
+.main-header {
+  background-color: rgb(91, 25, 25);
+  border-radius: 6px;
+  z-index: 1030;
+  padding-top: 10px;
+}
+
+.brand_logo {
+  font-size: 35px;
+  line-height: 1.2;
+  color: rgb(205, 159, 159);
+}
+
+.brand_logo span {
+  color: red;
+  font-size: 23px;
+}
+
+.brand_logo .header-icon {
+  color: rgb(205, 159, 159);
+  text-decoration: none;
+}
+
+/* Search */
+.search-box {
+  position: relative;
+}
+
+.search {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border-radius: 6px;
+  background-color: rgb(101, 75, 75);
+  border: 1px solid rgb(156, 150, 150);
+  color: white;
+  padding: 0 45px 0 20px;
+}
+
+.search:hover{
+  border-color: rgb(135, 36, 36);
+  background-color: rgb(75, 35, 35);
+}
+
+.search-icon:hover{
+  color: rgb(75, 35, 35);
+
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Buttons */
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-right button{
+  background-color: rgb(90, 73, 73);
+  font-weight: bold;
+  color: white;
+}
+
+.header-right i {
+  color: brown;
+}
+
+#language {
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 500;
+  outline: none;
+  color: white;
+  background-color: rgb(90, 73, 73);
+}
+
+.header-bar {
+  margin-top: 0px;
+  background-color: rgb(83, 15, 15);
+  padding-top: 6px;
+  font-size: 20px;
+}
+
+.rule {
+  margin-bottom: 0;
+}
+
+/* =========== header Phone ================= */
+@media (max-width: 767.98px) {
+  .header-right {
+    flex-wrap: nowrap;                 /* មិនឱ្យចុះជួរ */
+    justify-content: space-around;    /* ចែកឱ្យស្មើគ្នាពេញទទឹង */
+    gap: 6px;
+  }
+  .header-right .btn {
+    padding: 0.375rem 0.65rem;
+  }
+  #language {
+    min-width: 0;
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============= Nav =============== */
+.nav-row {
+  flex-wrap: nowrap;     
+  gap: 4px;
+}
+
+.nav-row .nav-item {
+  min-width: 0;
+}
+
+.nav-row .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.9rem;
+  color: rgb(205, 159, 159);
+}
+
+.nav-row .nav-link:hover,
+.nav-row .nav-link:focus-visible,
+.nav-row .nav-link.active {
+  color: #ff4d4d;
+}
+
+/* Navbr for Tablet */
+@media (max-width: 991.98px) {
+  .nav-row .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 0.6rem;
+  }
+}
+
+/* ============ Navbar for phone ===============*/
+@media (max-width: 575.98px) {
+  .nav-row {
+    gap: 0;
+  }
+  .nav-row .nav-item {
+    flex: 1 1 0;
+  }
+  .nav-row .nav-link {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3px;
+    white-space: normal;     
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.15;
+    padding: 0.35rem 0;
+  }
+  .nav-row .nav-link i {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============= Main content ============== */
+
+.main_hero{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main_hero .carousel-item{
+    position: relative;
+    overflow: hidden;   /* លាក់គែមព្រិល */
+    padding: 40px 0 70px;
+}
+
+/* រូបខាងក្រោយ: ព្រិល + ងងឹត = "ស្រមោល" */
+.hero_bg{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(40px) brightness(0.5);
+    transform: scale(1.3);         /* ពង្រីក កុំឱ្យឃើញគែមស */
+}
+
+/* រូបខាងមុខ: ទទឹង 80% នៃអេក្រង់ ទាំងកុំព្យូទ័រ និងទូរសព្ទ */
+.hero_front{
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 15 / 9.5;       
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* =========== image view on phone ============== */
+@media (max-width: 576.98px) {
+  .hero_front { height: auto; }
+  .hero_img { 
+    max-height: none;
+    width: 400px;
+    height: 270px;
+  }
+
+  .hero_topMovie{
+    padding: 0px 20px;
+  }
+}
+
+/* =========== image view on tabelt ============== */
+@media (min-width: 577px) and (max-width: 991px){
+  .hero_front { height: auto; }
+  .hero_img { 
+    max-height: none;
+    width: 600px;
+  }
+}
+
+/* =========== image view on laptop ============== */
+@media (min-width: 970px){
+  .hero_front { height: auto; }
+  .hero_img { 
+    max-height: none;
+    width: 780px;
+  }
+}
+
+/* =========== សញ្ញាចុច (dots) ==============*/
+.main_hero .carousel-indicators{ margin-bottom: 24px; }
+.main_hero .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 50%;
+}
+.main_hero .carousel-indicators .active{
+    width: 30px;
+    border-radius: 6px;
+    background-color: #e03131;
+}
+
+/* ===============main titile Movie ================ */
+.main_title{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  height: 100%;
+  /* border: 1px solid; */
+}
+
+.title_Welcome{
+  font-weight: 700;
+}
+
+.title_p{
+  font-size: 15px;
+  color: gray;
+}
+
+/* ============== welcome title + card feel ============== */
+/* ================ on phone ============= */
+@media (max-width: 575.98px){
+  .title_Welcome{
+    font-size: 23px;
+  }
+  .title_p{ 
+    font-size: 13px;
+    padding: 0px 40px;
+  }
+
+  .feel_icon i{ font-size: 18px;}
+  
+}
+
+/* =================== On tabelt ================ */
+@media (min-width: 576px) and (max-width: 990px){
+  .title_Welcome{ font-size: 27px;}
+  .title_p{
+    padding: 0px 60px;
+  }
+
+  .feel_icon i{font-size: 20px;}
+  .feel_letter{font-size: 18px;}
+}
+
+/* =============== main content =============== */
+.hero_content{
+  max-width: 1300px;
+  margin: 0 auto;
+  line-height: 1.5;
+  /* border: 1px solid gray; */
+}
+
+.hero_topMovie{
+  max-width: 1300px;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid gray; */
+}
+
+.hero_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid gray; */
+  padding: 0px 20px;
+}
+
+.hero_text{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 30px;
+  i{
+    color: red;
+  }
+}
+
+.hero_icon{
+  font-size: 18px;
+  text-decoration: none;
+  color: yellow;
+}
+
+.hero_subtitle{
+  padding: 0px 20px;
+  font-size: 17px;
+  color: rgb(172, 144, 144);
+}
+
+.hero_card{
+  max-width: 1250px;
+  margin: 0px auto;
+  /* border: 1px solid gray; */
+}
+
+.hero_box{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  /* border: 1px solid gray; */
+}
+
+.hero_image{
+  width: 100%;
+  margin: auto;
+  height: 350px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.hero_image img{
+  width: 93%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hero_des{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  font-weight: 600;
+  /* border: 1px solid; */
+}
+
+.hero_titleMovie{
+  height: auto;
+  color:rgb(243, 238, 238)
+}
+
+.hero_screen{
+  width: 18%;
+  height: 100%;
+  margin-top: -10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgb(80, 80, 131);
+}
+
+.hero_rating{
+  color: yellow;
+  font-size: 15px;
+  margin-bottom: -10px;
+}
+
+/* ============== Feeling ============================ */
+.main_feel{
+  height: 100%;
+  /* border: 1px solid; */
+  padding: 10px;
+}
+
+.feel_title{
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  i{
+    color: yellow;
+  }
+}
+
+.feel_p{
+  margin-top: -10px;
+  padding: 10px 0px;
+  font-size: 15px;
+  color: gray;
+}
+
+.feel_bodycard{
+  max-width: 1300px;
+  height: 100%;
+  /* border: 1px solid; */
+}
+
+.feel_card{
+  display: block;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: #412323;
+}
+
+.feel_icon i{
+  font-size: 35px;
+  color: rgb(228, 156, 156);
+}
+
+.feel_letter{
+  color: rgb(184, 177, 177);
+  font-weight: 700;
+  line-height: 2;
+  font-size: 20px;
+}
+
+.feel_type{
+  font-size: 20px;
+  line-height: 1;
+  /* color: whitesmoke; */
+  color: gray;
+}
+
+
+/* ============ Now Showing ================= */
+.hero_nowMovie{
+  max-width: 1300px;
+  height: 100%;
+  padding: 10px;
+  /* border: 1px solid gray; */
+}
+
+.movie_filter{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0px 20px;
+}
+
+.btn_filter{
+  border-radius: 15px;
+  padding: 6px 8px;
+  background-color: rgb(90, 73, 73);
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn_filter:hover{
+  background-color: rgb(100, 60, 60);
+  color: rgb(178, 77, 77);
+}
+
+.hero_type{
+  font-size: 15px;
+  color: rgb(215, 201, 201);
+  margin-top: -10px;
+}
+
+/* ============ action ============== */
+.hero_box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero_box:hover {
+  transform: translateY(-8px);
+}
+
+.hero_image img {
+  transition: transform 0.4s ease;
+}
+
+.hero_box:hover .hero_image img {
+    transform: scale(1.05);
+}
+/* ============== Color Icon Screen ============== */
+.format-2d {
+    color: #FFFFFF;
+}
+
+.format-3d {
+    color: 	#D4AF37;
+}
+
+.format-imax {
+    color: #48B9FF;
+}
+
+.format-4dx {
+    color: #FF7043;
+}
+
+/* =============​ Format Movie =========== */
+.movie_format{
+  height: 100%;
+  padding-bottom: 0px;
+  font-size: 18px;
+  /* border: 1px solid; */
+}
+
+.format_title{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 25px;
+  font-size: 30px;
+  i{
+    color: yellow;
+  }
+}
+
+.format_body{
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.format_box{
+  height: 100%;
+  padding: 10px;
+  margin-top: -10px;
+  /* border: 1px solid; */
+}
+
+.format_image{
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.format_image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.format_text{
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 15px 5px;
+}
+
+.format_subtitle{
+  font-weight: 600;
+}
+
+.format_sentence{
+  margin-top: -10px;
+  font-size: 15px;
+  color: gray;
+}
+
+/* ============== Review Card ============== */
+.movie_review{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border: 1px solid; */
+}
+
+.review_header{
+
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  h4{
+    font-weight: 700
+  };
+  i{
+    font-size: 20px;
+    color: red;
+    /* margin-top: 5px; */
+  }
+}
+
+.review_p{
+  margin-top: -10px;
+  font-size: 15px;
+  color: gray;
+}
+
+.review_box{
+  height: 100%;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(93, 55, 55);
+}
+
+.review_noMovie{
+  text-align: center;
+  line-height: 2;
+}
+
+/* ============== Foooter ============*/
+footer{
+  padding-top: 40px;
+  background-color: rgb(32, 1, 1);
+}
+
+.main_footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  line-height: 1.5;
+}
+
+.footer_title{
+  font-weight: 800;
+  margin: 20px 0px;
+}
+
+.footer_brand{
+font-weight: 800;
+font-size: 16px;
+}
+
+.footer_logoIcon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer_icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(91, 25, 25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgb(232, 180, 180);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.footer_icon:hover,
+.footer_icon:focus-visible {
+  background-color: #e03131;
+  color: #fff;
+}
+
+.privacy{
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.privacy .nav-link {
+  font-size: 0.9rem;
+}
+
+.license{
+  text-align: center;
+  padding: 10px 0 40px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ============ footer for Phone ================ */
+@media (max-width: 575.98px) {
+  .brand_logo {
+    font-size: 26px;
+  }
+  .brand_logo span {
+    font-size: 18px;
+  }
+  .main_hero .carousel-item {
+    padding: 24px 0 56px;
+  }
+  .hero_front {
+    height: auto;            
+  }
+  .hero_img {
+    max-height: none;
+  }
+}

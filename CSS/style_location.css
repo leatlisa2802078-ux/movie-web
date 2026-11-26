@@ -1,0 +1,88 @@
+/* ========= List movie ========== */
+.loca_container{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.loca_name{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgb(212, 204, 194);
+}
+
+.loca_loyout{
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.loyout_box{
+    height: 100%;                      
+    display: flex;
+    flex-direction: column;            
+    gap: 6px;
+    padding: 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.loyout_img{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.loyout_img img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.loyout_title{
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: rgb(220, 192, 192);
+}
+
+.loyout_subtitle{
+    line-height: 2;
+}
+
+.btn_link{
+    text-decoration: none;
+    color: white;
+}
+
+/* =========== Action ============= */
+.loyout_box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.loyout_box:hover {
+    transform: translateY(-8px);
+}
+
+.loyout_img img {
+    transition: transform 0.4s ease;
+}
+
+.loyout_box:hover .loyout_img img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 575.98px){
+    .loca_loyout{ padding: 12px; }
+}
+
+/* ============ Trailer movies ========== */
+.trailer_box{
+    max-width: 900px;
+    background-color: beige;
+    border: 1px solid gray;
+}
+

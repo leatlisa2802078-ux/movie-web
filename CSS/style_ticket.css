@@ -1,0 +1,357 @@
+.movie_ticket{
+  max-width: 1300px;
+  height: 100%;
+  padding: 20px 30px;
+  line-height: 1.5;
+}
+
+.movie_ticketTitle {
+    text-align: center;
+}
+
+.movie_ticketTitle h4 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.movie_ticketTitle i {
+    color: rgb(213, 77, 100);
+}
+
+.ticket_subtitle{
+    color: yellow;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+
+/* ========== Body card ============ */
+.ticket_card{
+    max-width: 1300px;
+    margin: 0px auto;
+    height: 100%;
+    /* border: 1px solid; */
+}
+
+.ticket_body{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.ticket_body:hover {
+    transform: translateY(-8px);
+}
+
+.ticket_img{
+    width: 100%;
+    height: 320px;
+    margin-top: 0;
+    overflow: hidden;   
+}
+
+.ticket_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ticket_text{
+    padding-top: 10px;
+    line-height: 1;
+}
+
+.ticket_body:hover .ticket_img img {
+    transform: scale(1.05);
+}
+
+.ticket_header{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.text_title{
+    font-size: 23px;
+}
+
+.text_age{
+    width: 75px;
+    height: 100%;
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 20px;
+    color: green;
+    margin-bottom: 7px;
+}
+
+.text_price{
+    font-size: 20px;
+    font-weight: 600;
+    color: yellowgreen;
+}
+
+/* .text_price span{
+    font-size: 25px;
+}
+
+.ticket_body {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ticket_body:hover {
+    transform: translateY(-8px);
+}
+
+.ticket_img img {
+    transition: transform 0.4s ease;
+}
+
+.ticket_body:hover .ticket_img img {
+    transform: scale(1.05);
+} */
+
+@media (max-width: 575.98px) {
+    .movie_ticket {
+        padding: 15px;
+    }
+
+    .ticket_text {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .ticket_header {
+        gap: 2px 8px;
+    }
+
+    .ticket_header .text_title {
+        font-size: 17.5px;
+    }
+
+    .text_age {
+        font-size: 0.85rem;
+    }
+
+    .ticket_img {
+        height: 220px;
+    }
+
+    .dis_subtitle {
+        font-size: 20px;
+    }
+
+}
+/* =============== Cinema subtitle ============== */
+
+.dis_subtitle {
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.dis_subtitle i {
+    color: red;
+    font-size: 25px;
+}
+
+
+/* ---------- Promo (F&B combo) ---------- */
+.home_promo{
+    overflow: hidden;                              /* ឱ្យជ្រុងរូបមូលតាម card */
+    background-color: rgb(91, 25, 25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+}
+
+.home_promo_img{
+    display: block;
+    width: 100%;
+    height: auto;                                  /* បង្ហាញរូបទាំងមូល មិនកាត់ */
+}
+
+.home_promo_body{
+    padding: 24px;
+}
+
+.home_promo_body h2{
+    margin: 8px 0;
+    font-weight: 800;
+}
+
+.home_promo_body p{
+    color: rgb(230, 205, 205);
+}
+
+.home_promo_price{
+    margin-bottom: 14px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f5c518;                                /* តម្លៃពណ៌លឿង */
+}
+
+.home_promo_price span{
+    font-size: 18px;
+    color: gray;
+}
+
+.home_menu i{
+    color: green;
+    font-size: 20px;
+}
+
+.main_scroll{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* ===================== Menu Food & Drink =============== */
+.food_p{
+    font-size: 15px;
+    color: gray;
+    margin-top: -10px;
+}
+
+@media (max-width: 576.98px) {
+    .food_p {
+        font-size: 15px;
+        margin-top: -10px;
+    }
+
+    .home_promo{
+        width: 90%;
+        margin: auto;
+    }
+
+    .nav_bg{
+        margin-left: 20px;
+    }
+}
+
+/* =========== Home Menu ============= */
+.menu_food{
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 10px 20px;
+    /* border: 1px solid; */
+}
+
+.menu_logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    i{
+        color: red;
+    }
+}
+
+.food_body{
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.food_card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* border: 1px solid gray; */
+    border-radius: 7px;
+}
+
+.food_bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.food_img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.food_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.food_card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.food_card:hover {
+  transform: translateY(-8px);
+}
+
+.food_img img {
+  transition: transform 0.4s ease;
+}
+
+.food_card:hover .food_img img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 576.98px) {
+    .menu_food {
+        padding: 10px;
+    }
+
+    .menu_logo {
+        font-size: 22px;
+    }
+
+    .home_promo_body {
+        padding: 16px;
+    }
+}
+
+.food_text{
+    width: 100%;
+    height: 100;
+    padding: 10px 7px;
+    /* border: 1px solid; */
+}
+
+.food_title{
+    font-weight: 600;
+}
+
+.food_subtitle{
+    font-size: 16px;
+    color: gray;
+}
+
+.foot_price{
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.foot_price span{
+    font-size: 15px;
+    color: gray;
+}
